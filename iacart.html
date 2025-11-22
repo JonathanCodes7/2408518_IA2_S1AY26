@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Rental Site</title>
+    <!--Link To CSS-->
+    <link rel="stylesheet" href="stylesss.css">
+    <!--Box Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Javascript-->
+    <script src="ia_script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="iaindex.html" class="logo"><i class='bx bx-home'></i>Caribbean Rentals</a>
+            <input type="checkbox" name="" id="menu">
+            <label for="menu" class="menu-icon"><i class='bx bx-menu' id="menu-icon"></i></label>
+            <ul class="navbar">
+                <li><a href="iaindex.html">Home</a></li>
+                <li><a href="iaindex.html#about">About</a></li>
+                <li><a href="iaindex.html#properties">Properties</a></li>
+                <li><a href="iacart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="header-right">
+                <a href="loginpage.html" class="btn">Log In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-page-container">
+        <div class="container">
+            <div class="heading">
+                <span>Your Booking Cart</span>
+                <h2>Review Your Selected Properties</h2>
+                <p>Manage your rental selections before proceeding to checkout</p>
+            </div>
+
+            <div class="cart-content">
+                <!-- Cart Items Section -->
+                <div class="cart-items-section">
+                    <h3>Selected Properties (<span id="item-count">0</span> items)</h3>
+                    
+                    <div id="cart-items-container">
+                        <!-- Cart items will be dynamically inserted here -->
+                        <div class="empty-cart-message">
+                            <i class='bx bx-cart'></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Browse our properties and add some amazing Caribbean rentals to your cart!</p>
+                            <a href="iaindex.html#properties" class="btn">Explore Properties</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary Section -->
+                <div class="cart-summary-section">
+                    <div class="summary-card">
+                        <h3>Booking Summary</h3>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="summary-subtotal">$0.00</span>
+                            </div>
+                            
+                            <!-- Discount Section -->
+                            <div class="discount-section">
+                                <div class="discount-header">
+                                    <span>Discounts</span>
+                                    <button id="apply-discount-btn" class="discount-btn">Apply Code</button>
+                                </div>
+                                <div id="discount-input-container" class="discount-input-container" style="display: none;">
+                                    <input type="text" id="discount-code" placeholder="Enter discount code">
+                                    <button id="submit-discount" class="btn-small">Apply</button>
+                                </div>
+                                <div id="applied-discounts" class="applied-discounts">
+                                    <!-- Applied discounts will appear here -->
+                                </div>
+                                <div class="summary-row discount-row">
+                                    <span>Discount Amount:</span>
+                                    <span id="summary-discount">-$0.00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Tax (15%):</span>
+                                <span id="summary-tax">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-row total-row">
+                                <span><strong>Total:</strong></span>
+                                <span id="summary-total"><strong>$0.00</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- Available Discounts -->
+                        <div class="available-discounts">
+                            <h4>Available Discount Codes</h4>
+                            <div class="discount-codes">
+                                <div class="discount-code">
+                                    <span class="code">WELCOME10</span>
+                                    <span class="description">10% off your first booking</span>
+                                </div>
+                                <div class="discount-code">
+                                    <span class="code">CARIBBEAN20</span>
+                                    <span class="description">20% off stays longer than 2 months</span>
+                                </div>
+                                <div class="discount-code">
+                                    <span class="code">SUMMER15</span>
+                                    <span class="description">15% off summer bookings</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="cart-actions">
+                            <button id="clear-cart-btn" class="btn btn-outline">Clear All</button>
+                            <a href="iaindex.html#properties" class="btn btn-outline">Continue Shopping</a>
+                            <button id="checkout-btn" class="btn btn-primary">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Modal -->
+    <div id="discount-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Apply Discount Code</h3>
+            <div class="modal-body">
+                <p>Enter your discount code below:</p>
+                <input type="text" id="modal-discount-code" placeholder="e.g., WELCOME10">
+                <div class="modal-actions">
+                    <button id="cancel-discount" class="btn btn-outline">Cancel</button>
+                    <button id="apply-modal-discount" class="btn btn-primary">Apply Code</button>
+                </div>
+                <div id="discount-message" class="discount-message"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

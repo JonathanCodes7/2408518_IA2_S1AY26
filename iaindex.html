@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Rental Site</title>
+    <!--Link To CSS-->
+    <link rel="stylesheet" href="stylesss.css">
+    <!--Box Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--Javascript-->
+    <script src="ia_script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+                <a href="iaindex.html" class="logo"><i class='bx bx-home'></i>Home Rental Site</a>
+                <input type="checkbox" name="" id="menu">
+                <label for="menu" class="menu-icon"><i class='bx bx-menu' id="menu-icon"></i></label>
+                <ul class="navbar">
+                    <li><a href="iaindex.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#about">Contact</a></li>
+                    <li><a href="iacart.html">Cart</a></li>
+                </ul>
+            <div class="header-right">
+                <a href="loginpage.html" class="btn">Log In Here!</a>
+        </div>
+    </div>
+    </header>
+    <!--Home Section-->
+    <section class="home-container" id="home">
+        <div class="home-text">
+            <h1>Come Find Your<br>Next Amazing Place To<br> Stay.</h1>
+            <a href="index.html" class="btn">Sign Up</a>
+        </div>
+    </section>
+    <!--About Section-->
+    <section class="about-container" id="about">
+        <div class="about-img">
+            <img src="aboutimg.jpg" alt="About Image">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>Providing You With The <br> BEST Rental Properties For The Caribbean<br>At The Best Prices</h2>
+            <p>My name is Jonathan Folkes (2408518), and my Email is jonathanfolkes007@gmail.com</p>
+            <p>My Web Programming module code is CIT2011, and my class time is Tuesday from<br>3-5p.m</p>
+            <p>This is my IA Assignment #2 showcasing my house rental website.</p>
+            <p>If you ever need to contact me:</p>
+            <br>
+            <a href="mailto:2408518@utech.edu.jm" target="_blank">
+                <button class="btn">Contact Me</button>
+            </a>
+        </div>
+    </section>
+    <!--Choose Your Dates-->
+    <section class="dates-container" id="choose-dates">
+    <div class="heading">
+        <span>Choose Your Dates</span>
+        <h2>Select Your Check-In and Check-Out Dates</h2>
+        <p>Plan your stay by choosing the dates that work best for you!</p>
+    </div>
+    <form id="dates-form" class="dates-form">
+        <label for="checkin-date"><i class="bx bx-calendar"></i> Check-In Date:</label>
+        <input type="date" id="checkin-date" name="checkin-date" required>
+
+        <label for="checkout-date"><i class="bx bx-calendar"></i> Check-Out Date:</label>
+        <input type="date" id="checkout-date" name="checkout-date" required>
+
+        <button type="submit" class="btn">Submit Dates</button>
+    </form>
+</section>
+    <!--Properties Section-->
+    <section class="properties-container" id="properties">
+        <div class="heading">
+            <span>Our Properties</span>
+            <h2>Here are Our Most Popular Properties in the Caribbean!</h2>
+            <p>These beautiful properties are an eye catching wonder that you have to see in person to believe!</p>
+        </div>
+        <div class="properties-container container">
+            <!--1st Box out of 6-->
+            <div class ="box">
+                <img src="villa1.jpg" alt="Property 1">
+                <h3>$3,656/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>La Paloma</h3>
+                    <p>Punta Cana</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>14</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="La Paloma" data-price="3656">Add to Cart</button>
+            </div>                   
+            <!--2nd Box out of 6-->
+            <div class ="box">
+                <img src="villa2.jpg" alt="Property 2">
+                <h3>$481/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>Casa Luna</h3>
+                    <p>Dominican Republic</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>4</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="Casa Luna" data-price="481">Add to Cart</button>
+            </div>           
+            <!--3rd Box out of 6-->
+            <div class ="box">
+                <img src="villa3.jpg" alt="Property 3">
+                <h3>$1952/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>Atelier House</h3>
+                    <p>Barbados</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>10</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="Atelier House" data-price="1952">Add to Cart</button>
+            </div>      
+            <!--4th Box out of 6-->
+            <div class ="box">
+                <img src="villa4.jpg" alt="Property 4">
+                <h3>$4420/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>Casa Kimball</h3>
+                    <p>Dominican Republic</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>18</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="Casa Kimball" data-price="4420">Add to Cart</button>
+            </div>            
+            <!--5th Box out of 6-->
+            <div class ="box">
+                <img src="villa5.jpg" alt="Property 5">
+                <h3>$6700/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>Harbour Bliss</h3>
+                    <p>Antigua</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>12</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="Harbour Bliss" data-price="6700">Add to Cart</button>
+            </div>            
+            <!--6th Box out of 6-->
+            <div class ="box">
+                <img src="villa6.jpg" alt="Property 6">
+                <h3>$2400/month</h3>
+                <div class="content">
+                    <div class="text">
+                    <h3>Villa Papillon</h3>
+                    <p>Antigua</p>   
+                </div>
+                    <div class="icon">
+                        <i class='bx bx-bed'><span>12</span></i>
+                    </div>
+                </div>
+                <button class="btn add-to-cart" data-name="Villa Papillon" data-price="2400">Add to Cart</button>
+            </div>
+        </div>      
+    </section> 
+</body>
+</html>
