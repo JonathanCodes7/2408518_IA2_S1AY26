@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="stylesss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="ia_script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="navbar-container">
+        <a href="product.html" class="logo"><i class='bx bx-home'></i>Home Rental Site</a>
+        <ul class="navbar">
+            <li><a href="product.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="header-right">
+            <a href="index.html" class="btn">Log In</a>
+        </div>
+    </div>
+</header>
+
+<section class="dashboard-page-container">
+    <div class="container">
+        <div class="heading">
+            <span>Dashboard</span>
+            <h2>User Statistics & Invoices</h2>
+        </div>
+
+        <!-- User Frequency Charts -->
+        <div class="dashboard-section">
+            <h3>User Frequency</h3>
+            <p>Distribution by gender and age group.</p>
+            <div id="user-frequency-container" class="chart-container">
+                <!-- ShowUserFrequency() will inject two bar charts here -->
+            </div>
+        </div>
+
+        <!-- All Invoices / Search -->
+        <div class="dashboard-section">
+            <h3>All Invoices</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="search-trn">Search by TRN</label>
+                    <input type="text" id="search-trn" placeholder="123-456-789">
+                </div>
+                <button id="search-invoices-btn" class="btn">Search</button>
+            </div>
+            <div id="invoice-list-container" class="invoice-list-container">
+                <!-- ShowInvoices() / GetUserInvoices() will render here -->
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Rental Site</title>
+    <!--Link To CSS-->
+    <link rel="stylesheet" href="stylesss.css">
+    <!--Box Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!--Javascript-->
+    <script src="ia_script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <a href="product.html" class="logo"><i class='bx bx-home'></i>Caribbean Rentals</a>
+            <input type="checkbox" name="" id="menu">
+            <label for="menu" class="menu-icon"><i class='bx bx-menu' id="menu-icon"></i></label>
+            <ul class="navbar">
+                <li><a href="product.html">Home</a></li>
+                <li><a href="product.html#about">About</a></li>
+                <li><a href="product.html#properties">Properties</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="header-right">
+                <a href="index.html" class="btn">Log In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-page-container">
+        <div class="container">
+            <div class="heading">
+                <span>Your Cart</span>
+                <h2>Review Your Selected Properties</h2>
+            </div>
+
+            <div id="cart-items-container" class="cart-items-container">
+                <!-- Cart items dynamically inserted here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Cart Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount:</span>
+                    <span id="cart-discount">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="cart-tax">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="clear-cart-btn" class="btn danger">Clear Cart</button>
+                    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
