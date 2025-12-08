@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribbean Home Rentals – Properties</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="stylesss.css">
+
+    <!-- Boxicons (used across the site) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Favicon (optional, adjust path if needed) -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar-container">
+            <a href="product.html" class="logo">
+                <i class='bx bx-home'></i>
+                Caribbean Home Rentals
+            </a>
+
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <ul class="navbar">
+                <li><a href="product.html" class="active">Properties</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+
+            <div class="header-right">
+                <a href="index.html" class="btn">Log In</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero / Date Selection Section -->
+        <section class="hero-section">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <span class="tagline">Caribbean Getaways</span>
+                    <h1>Find your next rental home in the Caribbean</h1>
+                    <p>
+                        Choose your travel dates, browse our properties, and add your favourites to the cart
+                        to begin your booking.
+                    </p>
+                </div>
+
+                <!-- Dates Form (hooked by JS: dates-form, checkin-date, checkout-date) -->
+                <div class="dates-card">
+                    <h3>Select your stay dates</h3>
+                    <form id="dates-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin-date">Check-in</label>
+                                <input type="date" id="checkin-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-date">Check-out</label>
+                                <input type="date" id="checkout-date" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">
+                            Apply Dates
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--Properties / Shop Section-->
+        <section class="shop-section" id="properties">
+            <!-- Shop Header -->
+            <div class="heading text-center">
+                <span>Our Properties</span>
+                <h2>Caribbean Rentals Shop</h2>
+                <p class="shop-description">
+                    Browse our curated selection of Caribbean rental homes. Add a property to your cart to begin booking.
+                </p>
+            </div>
+
+            <!-- Filter / Sort UI (for now: visual only) -->
+            <section class="shop-filters">
+                <div class="shop-filter-card">
+                    <div class="shop-filter-grid">
+                        <div class="form-group">
+                            <label class="filter-label">Filter by Location</label>
+                            <select class="filter-select" disabled>
+                                <option>All</option>
+                                <option>Montego Bay</option>
+                                <option>Ocho Rios</option>
+                                <option>Negril</option>
+                                <option>Kingston</option>
+                                <option>Port Antonio</option>
+                                <option>Falmouth</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="filter-label">Filter by Price</label>
+                            <select class="filter-select" disabled>
+                                <option>Any</option>
+                                <option>Under $1000</option>
+                                <option>$1000 - $1300</option>
+                                <option>Over $1300</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="filter-label">Sort by</label>
+                            <select class="filter-select" disabled>
+                                <option>Featured</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="filter-note">
+                        * Filters are visual only for this version – products below are always shown.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Product Grid – JS will inject cards here -->
+            <section class="product-grid" id="products-container">
+                <!-- Cards inserted by JavaScript (renderProducts in ia_script.js) -->
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Caribbean Home Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main app script -->
+    <script src="ia_script.js"></script>
+</body>
+</html>
